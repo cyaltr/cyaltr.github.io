@@ -1,22 +1,36 @@
-const menuToggle = document.getElementById("menu-toggle");
-const navLinks = document.getElementById("nav-links");
+const menuToggle =
+    document.getElementById("menu-toggle");
+
+const navLinks =
+    document.getElementById("nav-links");
+
+
+// =========================================
+// Mobile Navigation
+// =========================================
 
 menuToggle.addEventListener("click", () => {
-    const isOpen = navLinks.classList.toggle("active");
+
+    const isOpen =
+        navLinks.classList.toggle("active");
 
     menuToggle.setAttribute(
         "aria-expanded",
         isOpen
     );
+
 });
 
 
-// Close mobile menu when a link is clicked
+// Close mobile menu after selecting a section
 
 const navigationLinks =
-    document.querySelectorAll("#nav-links a");
+    document.querySelectorAll(
+        "#nav-links a"
+    );
 
 navigationLinks.forEach((link) => {
+
     link.addEventListener("click", () => {
 
         navLinks.classList.remove("active");
@@ -27,13 +41,18 @@ navigationLinks.forEach((link) => {
         );
 
     });
+
 });
 
 
-// Automatically update copyright year
+// =========================================
+// Automatic Copyright Year
+// =========================================
 
 const currentYear =
-    document.getElementById("current-year");
+    document.getElementById(
+        "current-year"
+    );
 
 currentYear.textContent =
     new Date().getFullYear();
