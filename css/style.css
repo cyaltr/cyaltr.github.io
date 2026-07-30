@@ -310,7 +310,7 @@ img {
     max-width: 720px;
 }
 
-#about {
+#projects {
     position: relative;
     overflow: hidden;
 }
@@ -324,13 +324,12 @@ img {
     pointer-events: none;
 }
 
-#about .section-inner {
+#projects .section-inner {
     position: relative;
     z-index: 1;
 }
 
-#about h2,
-#about p {
+#projects h2 {
     color: #ffffff;
 }
 
