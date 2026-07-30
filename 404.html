@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="UTF-8">
 
     <meta
@@ -10,37 +8,29 @@
         content="width=device-width, initial-scale=1.0"
     >
 
-    <meta
-        name="robots"
-        content="noindex"
-    >
+    <meta name="robots" content="noindex">
+    <meta name="theme-color" content="#000000">
 
-    <title>404 | C</title>
+    <title>404 | Chloe Alencar Sena</title>
 
-    <link
-        rel="stylesheet"
-        href="css/style.css"
-    >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body class="error-theme">
 
     <main class="hero">
-
+        <div class="circuit-layer" aria-hidden="true"></div>
+        <div class="data-stream" aria-hidden="true"></div>
         <div class="container hero-content">
 
-            <p class="eyebrow">
-                Error 404
-            </p>
+            <p class="eyebrow">error 404</p>
 
-            <h1>
-                Signal lost.
-            </h1>
-
-            <h2>
-                This page doesn't exist.
-            </h2>
+            <h1>Signal lost.</h1>
+            <h2>This page doesn't exist.</h2>
 
             <p class="hero-description">
                 The URL you're looking for may have been
@@ -48,28 +38,32 @@
                 first place.
             </p>
 
+            <div class="terminal-card" style="max-width: 420px; margin-bottom: 32px; position: relative;">
+                <span class="hud-corner hud-corner--tl" aria-hidden="true"></span>
+                <span class="hud-corner hud-corner--tr" aria-hidden="true"></span>
+                <span class="hud-corner hud-corner--bl" aria-hidden="true"></span>
+                <span class="hud-corner hud-corner--br" aria-hidden="true"></span>
+                <div class="terminal-tab">
+                    <span class="dot-row">
+                        <span class="tab-dot"></span>
+                        <span class="tab-dot"></span>
+                        <span class="tab-dot"></span>
+                    </span>
+                    error.log
+                </div>
+                <div class="terminal-body">
+<span class="ln">1</span><span class="key">GET</span> <span class="str">request_path</span> <span class="punc">&rarr;</span> <span class="key">404</span><br>
+<span class="ln">2</span><span class="key">reason</span><span class="punc">:</span> <span class="str">"route not found"</span>
+                </div>
+            </div>
+
             <div class="hero-buttons">
-
-                <a
-                    href="/"
-                    class="button primary-button"
-                >
-                    Return Home
-                </a>
-
-                <a
-                    href="/#contact"
-                    class="button secondary-button"
-                >
-                    Get In Touch
-                </a>
-
+                <a href="/" class="button primary-button">return_home</a>
+                <a href="/#contact" class="button secondary-button">get_in_touch</a>
             </div>
 
         </div>
-
     </main>
 
 </body>
-
 </html>

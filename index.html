@@ -10,820 +10,192 @@
 
     <meta
         name="description"
-        content="Chloe Alencar Sena — Electrical Engineering student specializing in embedded systems, PCB design, robotics, and avionics."
+        content="Chloe Alencar Ferreira Sena — Electrical Engineering portfolio: embedded firmware, PCB design, and RF systems."
     >
 
-    <meta
-        name="author"
-        content="Chloe Alencar Sena"
-    >
+    <meta name="theme-color" content="#000000">
 
-    <title>Chloe Alencar Sena | Electrical Engineering</title>
+    <title>Chloe Alencar Ferreira Sena | Portfolio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-    <!-- ================================
-         Navigation
-    ================================= -->
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
 
-    <header class="site-header">
+    <header class="navbar">
 
-        <nav class="navbar container">
+        <a href="#home" class="logo">C.A.S.</a>
 
-            <a href="#home" class="logo">
-                CAS<span>.</span>
-            </a>
-
-            <button
-                class="menu-toggle"
-                id="menu-toggle"
-                aria-label="Open navigation menu"
-                aria-expanded="false"
-            >
-                ☰
-            </button>
-
-            <ul class="nav-links" id="nav-links">
-
-                <li>
-                    <a href="#home">Home</a>
-                </li>
-
-                <li>
-                    <a href="#about">About</a>
-                </li>
-
-                <li>
-                    <a href="#skills">Skills</a>
-                </li>
-
-                <li>
-                    <a href="#experience">Experience</a>
-                </li>
-
-                <li>
-                    <a href="#projects">Projects</a>
-                </li>
-
-                <li>
-                    <a href="#contact">Contact</a>
-                </li>
-
-            </ul>
-
+        <nav class="nav-links">
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
         </nav>
 
     </header>
 
 
-    <main>
+    <!-- =========================
+         HERO SECTION
+    ========================== -->
 
-        <!-- ================================
-             Hero
-        ================================= -->
+    <main>
 
         <section id="home" class="hero">
 
-            <div class="container hero-content">
+            <div class="container hero-grid">
 
-                <p class="eyebrow">
-                    Electrical Engineering • Embedded Systems • Robotics
+                <div class="hero-left">
+
+                    <p class="eyebrow">Electrical Engineering &middot; Concordia University</p>
+
+                    <h1>
+                        Chloe Alencar<br>
+                        Ferreira Sena
+                    </h1>
+
+                    <p class="hero-description">
+                        Co-op EE student building embedded systems and RF
+                        hardware for spacecraft and rovers &mdash; from
+                        schematic to soldered board to flight-tested firmware.
+                    </p>
+
+                    <div class="hero-buttons">
+                        <a href="#projects" class="button primary-button">View My Work</a>
+                        <a href="#contact" class="button secondary-button">Get In Touch</a>
+                    </div>
+
+                    <dl class="hero-specs">
+                        <div class="hero-spec-row">
+                            <dt>Role</dt>
+                            <dd>Director of Hardware, Avionics</dd>
+                        </div>
+                        <div class="hero-spec-row">
+                            <dt>Focus</dt>
+                            <dd>Embedded firmware, RF, PCB design</dd>
+                        </div>
+                        <div class="hero-spec-row">
+                            <dt>Unit</dt>
+                            <dd>Space Concordia</dd>
+                        </div>
+                    </dl>
+
+                </div>
+
+                <div class="hero-visual">
+                    <canvas id="waveCanvas" aria-hidden="true"></canvas>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             ABOUT
+        ========================== -->
+
+        <section id="about" class="content-section">
+
+            <div class="container section-inner">
+
+                <p class="section-label">01 &mdash; About</p>
+
+                <h2>Building, learning,<br>and solving.</h2>
+
+                <p>
+                    I'm a first-year Electrical Engineering Co-op
+                    student at Concordia University in Montreal,
+                    currently serving as Director of Hardware for
+                    Space Concordia's Avionics division and
+                    contributing to the Robotics division as well.
                 </p>
 
-                <h1>
-                    Chloe Alencar Sena
-                </h1>
-
-                <h2>
-                    Electrical Engineering Student
-                </h2>
-
-                <p class="hero-description">
-                    I design, build, and test hardware and embedded
-                    systems, with a particular interest in PCB design,
-                    microcontrollers, robotics, and hands-on engineering.
+                <p>
+                    My work spans PCB design, embedded firmware, and
+                    hardware bring-up and testing &mdash; bare-metal
+                    STM32 development, CAN bus communication, and RF
+                    link design for rover subsystems. I hold an
+                    Amateur Radio Operator certification and I'm
+                    trilingual in English, French, and Portuguese.
                 </p>
 
-                <div class="hero-buttons">
-
-                    <a
-                        href="#projects"
-                        class="button primary-button"
-                    >
-                        Explore My Work
-                    </a>
-
-                    <a
-                        href="#contact"
-                        class="button secondary-button"
-                    >
-                        Get In Touch
-                    </a>
-
-                </div>
-
-                <div class="hero-links">
-
-                    <a
-                        href="https://github.com/cyaltr"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        GitHub ↗
-                    </a>
-
-                    <a
-                        href="https://www.linkedin.com/in/chloe-alencar-sena/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        LinkedIn ↗
-                    </a>
-
-                </div>
-
             </div>
 
         </section>
 
 
-        <!-- ================================
-             About
-        ================================= -->
+        <!-- =========================
+             PROJECTS
+        ========================== -->
 
-        <section id="about" class="section">
+        <section id="projects" class="content-section projects-section">
 
-            <div class="container">
+            <div class="container section-inner">
 
-                <div class="section-heading">
+                <p class="section-label">02 &mdash; Projects</p>
 
-                    <p class="eyebrow">
-                        About
-                    </p>
-
-                    <h2>
-                        Engineering at the intersection
-                        of hardware and software.
-                    </h2>
-
-                </div>
-
-                <div class="about-layout">
-
-                    <div class="about-text">
-
-                        <p>
-                            I'm an Electrical Engineering student at
-                            Concordia University in Montreal, with a
-                            hands-on focus on embedded systems, PCB
-                            design, and electronics.
-                        </p>
-
-                        <p>
-                            Through my work with Space Concordia, I've
-                            had the opportunity to contribute to
-                            multidisciplinary engineering projects
-                            spanning robotics and solid rocketry.
-                        </p>
-
-                        <p>
-                            I enjoy working across the boundary between
-                            hardware and software — from designing and
-                            assembling PCBs to developing embedded
-                            firmware and testing systems in the field.
-                        </p>
-
-                        <p>
-                            Outside of engineering, I enjoy reading,
-                            building DIY guitar pedals, watching cinema,
-                            fossil hunting, and hiking.
-                        </p>
-
-                    </div>
-
-                    <div class="about-facts">
-
-                        <div class="fact">
-
-                            <span class="fact-number">
-                                2029
-                            </span>
-
-                            <span class="fact-label">
-                                Expected Engineering Graduation
-                            </span>
-
-                        </div>
-
-                        <div class="fact">
-
-                            <span class="fact-number">
-                                3+
-                            </span>
-
-                            <span class="fact-label">
-                                Years of Hands-On Work Experience
-                            </span>
-
-                        </div>
-
-                        <div class="fact">
-
-                            <span class="fact-number">
-                                3
-                            </span>
-
-                            <span class="fact-label">
-                                Languages
-                            </span>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- ================================
-             Skills
-        ================================= -->
-
-        <section id="skills" class="section section-alt">
-
-            <div class="container">
-
-                <div class="section-heading">
-
-                    <p class="eyebrow">
-                        Technical Skills
-                    </p>
-
-                    <h2>
-                        Tools I use to build things.
-                    </h2>
-
-                </div>
-
-                <div class="skills-grid">
-
-                    <div class="skill-card">
-
-                        <div class="skill-icon">
-                            01
-                        </div>
-
-                        <h3>
-                            Programming
-                        </h3>
-
-                        <p>
-                            C / C++<br>
-                            Python<br>
-                            ARM Assembly
-                        </p>
-
-                    </div>
-
-
-                    <div class="skill-card">
-
-                        <div class="skill-icon">
-                            02
-                        </div>
-
-                        <h3>
-                            Embedded Systems
-                        </h3>
-
-                        <p>
-                            STM32<br>
-                            Embedded C<br>
-                            CAN Bus<br>
-                            Microcontroller Development
-                        </p>
-
-                    </div>
-
-
-                    <div class="skill-card">
-
-                        <div class="skill-icon">
-                            03
-                        </div>
-
-                        <h3>
-                            PCB Design
-                        </h3>
-
-                        <p>
-                            KiCad<br>
-                            Altium Designer<br>
-                            PCB Assembly<br>
-                            Circuit Testing
-                        </p>
-
-                    </div>
-
-
-                    <div class="skill-card">
-
-                        <div class="skill-icon">
-                            04
-                        </div>
-
-                        <h3>
-                            Development Tools
-                        </h3>
-
-                        <p>
-                            STM32CubeIDE / STM32CubeMX<br>
-                            Visual Studio Code<br>
-                            CLion<br>
-                            Git / GitHub
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-                <div class="languages">
-
-                    <h3>
-                        Languages
-                    </h3>
-
-                    <div class="language-list">
-
-                        <span>
-                            English — Fluent
-                        </span>
-
-                        <span>
-                            French — Working Fluency
-                        </span>
-
-                        <span>
-                            Portuguese — Fluent
-                        </span>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- ================================
-             Experience
-        ================================= -->
-
-        <section id="experience" class="section">
-
-            <div class="container">
-
-                <div class="section-heading">
-
-                    <p class="eyebrow">
-                        Experience
-                    </p>
-
-                    <h2>
-                        Engineering beyond the classroom.
-                    </h2>
-
-                </div>
-
-                <div class="timeline">
-
-
-                    <!-- Space Concordia Robotics -->
-
-                    <article class="timeline-item">
-
-                        <div class="timeline-date">
-                            Sept 2025 — Present
-                        </div>
-
-                        <div class="timeline-content">
-
-                            <p class="timeline-organization">
-                                Space Concordia
-                            </p>
-
-                            <h3>
-                                Electrical Team Member —
-                                Robotics Division
-                            </h3>
-
-                            <p>
-                                Designed, assembled, and tested a custom
-                                STM32-based PCB and auxiliary boards,
-                                developing embedded firmware in C for
-                                LED array control and CAN bus communication.
-                            </p>
-
-                            <p>
-                                Contributed to the division's
-                                multi-year science rover project,
-                                assembling and testing critical PCBs
-                                across the rover's onboard systems.
-                            </p>
-
-                            <p>
-                                Collaborated with mechanical, software,
-                                and electrical teams to integrate a new
-                                PoE electrical system into the rover
-                                platform and supported logistics for
-                                transporting the rover to the University
-                                Rover Challenge in Utah.
-                            </p>
-
-                            <div class="experience-tags">
-
-                                <span>
-                                    STM32
-                                </span>
-
-                                <span>
-                                    Embedded C
-                                </span>
-
-                                <span>
-                                    CAN Bus
-                                </span>
-
-                                <span>
-                                    PCB Design
-                                </span>
-
-                                <span>
-                                    Robotics
-                                </span>
-
-                            </div>
-
-                        </div>
-
-                    </article>
-
-
-                    <!-- Space Concordia Rocketry -->
-
-                    <article class="timeline-item">
-
-                        <div class="timeline-date">
-                            Jan 2026 — Present
-                        </div>
-
-                        <div class="timeline-content">
-
-                            <p class="timeline-organization">
-                                Space Concordia
-                            </p>
-
-                            <h3>
-                                Avionics Team Member —
-                                Solid Rocketry Division
-                            </h3>
-
-                            <p>
-                                Reviewed avionics PCB designs to verify
-                                layout and compliance with team electrical
-                                standards.
-                            </p>
-
-                            <p>
-                                Oversaw division PCB assembly and trained
-                                new team members in both SMD and
-                                through-hole soldering under tight
-                                launch deadlines.
-                            </p>
-
-                            <p>
-                                Established a component inventory system
-                                to improve parts tracking and supply
-                                management for avionics builds.
-                            </p>
-
-                            <div class="experience-tags">
-
-                                <span>
-                                    Avionics
-                                </span>
-
-                                <span>
-                                    PCB Design
-                                </span>
-
-                                <span>
-                                    SMD
-                                </span>
-
-                                <span>
-                                    Through-Hole
-                                </span>
-
-                                <span>
-                                    Soldering
-                                </span>
-
-                            </div>
-
-                        </div>
-
-                    </article>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- ================================
-             Projects
-        ================================= -->
-
-        <section id="projects" class="section section-alt">
-
-            <div class="container">
-
-                <div class="section-heading">
-
-                    <p class="eyebrow">
-                        Selected Work
-                    </p>
-
-                    <h2>
-                        Projects &amp; Engineering Work
-                    </h2>
-
-                    <p class="section-intro">
-                        A selection of hands-on engineering projects
-                        and technical work. Detailed project materials
-                        are available upon request.
-                    </p>
-
-                </div>
+                <h2>Selected Work</h2>
 
                 <div class="projects-grid">
 
-
-                    <!-- Project 1 -->
-
                     <article class="project-card">
+                        <span class="project-number">01</span>
 
-                        <div class="project-number">
-                            01
-                        </div>
+                        <h3>AirLink</h3>
 
-                        <div class="project-content">
+                        <p>
+                            A handheld rover killswitch built for
+                            Space Concordia: a local control unit
+                            paired with a rover-mounted remote end
+                            over 2.4 GHz LoRa (SX1280/SX1281), wired
+                            into the Power Distribution System to cut
+                            power on command.
+                        </p>
 
-                            <p class="project-category">
-                                Embedded Systems
-                            </p>
-
-                            <h3>
-                                STM32 LED Array Controller
-                            </h3>
-
-                            <p>
-                                Designed, assembled, and tested a custom
-                                STM32-based PCB and auxiliary boards.
-                                Developed embedded firmware in C for
-                                LED array control and CAN bus communication.
-                            </p>
-
-                            <div class="project-tags">
-
-                                <span>STM32</span>
-                                <span>C</span>
-                                <span>CAN Bus</span>
-                                <span>PCB</span>
-
-                            </div>
-
-                            <span class="project-status">
-                                Details available upon request
-                            </span>
-
-                        </div>
-
+                        <a href="#">View Project &rarr;</a>
                     </article>
 
 
-                    <!-- Project 2 -->
-
                     <article class="project-card">
+                        <span class="project-number">02</span>
 
-                        <div class="project-number">
-                            02
-                        </div>
+                        <h3>Status Indicator Light Controller</h3>
 
-                        <div class="project-content">
+                        <p>
+                            An STM32-based WS2812 LED controller
+                            communicating over CAN bus through an
+                            MCP25625 transceiver, including tracking
+                            down an extended-frame configuration bug
+                            and validating fixes in loopback mode.
+                        </p>
 
-                            <p class="project-category">
-                                Robotics
-                            </p>
-
-                            <h3>
-                                Science Rover Electrical Systems
-                            </h3>
-
-                            <p>
-                                Contributed to the electrical systems of
-                                a multi-year science rover project,
-                                including PCB assembly and testing across
-                                onboard systems.
-                            </p>
-
-                            <div class="project-tags">
-
-                                <span>Robotics</span>
-                                <span>PCB Assembly</span>
-                                <span>Testing</span>
-                                <span>Systems Integration</span>
-
-                            </div>
-
-                            <span class="project-status">
-                                Details available upon request
-                            </span>
-
-                        </div>
-
+                        <a href="#">View Project &rarr;</a>
                     </article>
 
 
-                    <!-- Project 3 -->
-
                     <article class="project-card">
+                        <span class="project-number">03</span>
 
-                        <div class="project-number">
-                            03
-                        </div>
+                        <h3>GPS Module Bring-Up</h3>
 
-                        <div class="project-content">
+                        <p>
+                            Diagnosed a MAX-M10S GPS module wired
+                            through a CH343P bridge and analog
+                            switches, traced a UART routing fault to
+                            hardwired select pins, and guided the
+                            board-level pin-lift repair.
+                        </p>
 
-                            <p class="project-category">
-                                Electrical Systems
-                            </p>
-
-                            <h3>
-                                Rover PoE System Integration
-                            </h3>
-
-                            <p>
-                                Collaborated across mechanical, software,
-                                and electrical subdivisions to integrate
-                                a new Power over Ethernet electrical system
-                                into a rover platform.
-                            </p>
-
-                            <div class="project-tags">
-
-                                <span>PoE</span>
-                                <span>Integration</span>
-                                <span>Robotics</span>
-                                <span>Electrical Systems</span>
-
-                            </div>
-
-                            <span class="project-status">
-                                Details available upon request
-                            </span>
-
-                        </div>
-
-                    </article>
-
-
-                    <!-- Project 4 -->
-
-                    <article class="project-card">
-
-                        <div class="project-number">
-                            04
-                        </div>
-
-                        <div class="project-content">
-
-                            <p class="project-category">
-                                Avionics
-                            </p>
-
-                            <h3>
-                                Avionics PCB Development
-                            </h3>
-
-                            <p>
-                                Reviewed avionics PCB layouts for
-                                compliance with electrical standards
-                                and supported PCB assembly for solid
-                                rocketry systems.
-                            </p>
-
-                            <div class="project-tags">
-
-                                <span>Avionics</span>
-                                <span>PCB Design</span>
-                                <span>Altium</span>
-                                <span>KiCad</span>
-
-                            </div>
-
-                            <span class="project-status">
-                                Details available upon request
-                            </span>
-
-                        </div>
-
-                    </article>
-
-
-                    <!-- Project 5 -->
-
-                    <article class="project-card">
-
-                        <div class="project-number">
-                            05
-                        </div>
-
-                        <div class="project-content">
-
-                            <p class="project-category">
-                                Electronics
-                            </p>
-
-                            <h3>
-                                DIY Electronics
-                            </h3>
-
-                            <p>
-                                Personal interest in hands-on electronics
-                                and circuit design, including DIY guitar
-                                pedal projects and experimentation.
-                            </p>
-
-                            <div class="project-tags">
-
-                                <span>Electronics</span>
-                                <span>Circuits</span>
-                                <span>DIY</span>
-
-                            </div>
-
-                            <span class="project-status">
-                                Personal Projects
-                            </span>
-
-                        </div>
-
-                    </article>
-
-
-                    <!-- Project 6 -->
-
-                    <article class="project-card project-card-muted">
-
-                        <div class="project-number">
-                            06
-                        </div>
-
-                        <div class="project-content">
-
-                            <p class="project-category">
-                                Future Work
-                            </p>
-
-                            <h3>
-                                More Projects Coming Soon
-                            </h3>
-
-                            <p>
-                                This portfolio will continue to grow
-                                as I document more of my engineering
-                                projects and technical work.
-                            </p>
-
-                            <div class="project-tags">
-
-                                <span>In Progress</span>
-
-                            </div>
-
-                        </div>
-
+                        <a href="#">View Project &rarr;</a>
                     </article>
 
                 </div>
@@ -833,147 +205,29 @@
         </section>
 
 
-        <!-- ================================
-             Education
-        ================================= -->
+        <!-- =========================
+             CONTACT
+        ========================== -->
 
-        <section class="section">
+        <section id="contact" class="content-section contact-section">
 
-            <div class="container">
+            <div class="container section-inner">
 
-                <div class="section-heading">
+                <p class="section-label">03 &mdash; Contact</p>
 
-                    <p class="eyebrow">
-                        Education
-                    </p>
-
-                    <h2>
-                        Academic Background
-                    </h2>
-
-                </div>
-
-                <div class="education-grid">
-
-                    <article class="education-card">
-
-                        <p class="education-date">
-                            2025 — 2029
-                        </p>
-
-                        <h3>
-                            Bachelor of Engineering —
-                            Electrical Engineering Co-op
-                        </h3>
-
-                        <p>
-                            Concordia University
-                            <br>
-                            Montreal, Quebec
-                        </p>
-
-                        <span>
-                            Institute for Co-operative Education
-                        </span>
-
-                    </article>
-
-
-                    <article class="education-card">
-
-                        <p class="education-date">
-                            2024 — 2025
-                        </p>
-
-                        <h3>
-                            Bachelor of Science —
-                            Pure &amp; Applied Mathematics
-                        </h3>
-
-                        <p>
-                            Concordia University
-                            <br>
-                            Montreal, Quebec
-                        </p>
-
-                        <span>
-                            20 Credits • Transferred to Electrical Engineering
-                        </span>
-
-                    </article>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- ================================
-             Contact
-        ================================= -->
-
-        <section id="contact" class="section contact-section">
-
-            <div class="container contact-content">
-
-                <p class="eyebrow">
-                    Contact
-                </p>
-
-                <h2>
-                    Let's build something.
-                </h2>
+                <h2>Let's connect.</h2>
 
                 <p>
-                    Whether you'd like to discuss engineering,
-                    embedded systems, robotics, or potential
-                    opportunities, I'd be happy to connect.
+                    Interested in working together or learning more
+                    about my work?
                 </p>
 
-                <div class="contact-buttons">
-
-                    <a
-                        href="mailto:chloe.alencar@gmail.com"
-                        class="button primary-button"
-                    >
-                        Email Me
-                    </a>
-
-                    <a
-                        href="https://www.linkedin.com/in/chloe-alencar-sena/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="button secondary-button"
-                    >
-                        LinkedIn
-                    </a>
-
-                </div>
-
-                <div class="contact-links">
-
-                    <a
-                        href="https://github.com/cyaltr"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        github.com/cyaltr
-                    </a>
-
-                    <span>
-                        •
-                    </span>
-
-                    <a
-                        href="https://www.linkedin.com/in/chloe-alencar-sena/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        linkedin.com/in/chloe-alencar-sena
-                    </a>
-
-                </div>
+                <a
+                    href="mailto:your.email@example.com"
+                    class="button primary-button"
+                >
+                    Send Me an Email
+                </a>
 
             </div>
 
@@ -981,29 +235,16 @@
 
     </main>
 
-
-    <!-- ================================
-         Footer
-    ================================= -->
-
     <footer class="site-footer">
-
-        <div class="container footer-content">
-
-            <p>
-                &copy;
-                <span id="current-year"></span>
-                Chloe Alencar Sena
-            </p>
-
-            <p>
-                Electrical Engineering • Montreal, QC
-            </p>
-
+        <div class="container">
+            <p>&copy; 2026 Chloe Alencar Ferreira Sena</p>
         </div>
-
     </footer>
 
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
 
     <script src="js/script.js"></script>
 
