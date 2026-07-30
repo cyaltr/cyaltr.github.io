@@ -10,7 +10,7 @@
 
     <meta
         name="description"
-        content="Chloe Alencar Ferreira Sena — Electrical Engineering portfolio: PCB design and embeded firmware"
+        content="Chloe Alencar Ferreira Sena — Electrical Engineering portfolio: embedded firmware, PCB design, and RF systems."
     >
 
     <meta name="theme-color" content="#000000">
@@ -19,7 +19,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Libre+Bodoni:wght@500;600;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -58,8 +58,8 @@
                     <p class="eyebrow">Electrical Engineering &middot; Concordia University</p>
 
                     <h1>
-                        Chloe Alencar<br>
-                        Ferreira Sena
+                        CHLOE ALENCAR<br>
+                        FERREIRA SENA
                     </h1>
 
                     <p class="hero-description">
@@ -105,6 +105,8 @@
 
         <section id="about" class="content-section">
 
+            <canvas id="tunnelCanvas" aria-hidden="true"></canvas>
+
             <div class="container section-inner">
 
                 <p class="section-label">01 &mdash; About</p>
@@ -148,54 +150,81 @@
                 <div class="projects-grid">
 
                     <article class="project-card">
-                        <span class="project-number">01</span>
+                        <span class="corner-tick corner-tick--tl" aria-hidden="true"></span>
+                        <span class="corner-tick corner-tick--br" aria-hidden="true"></span>
+                        <div class="project-card-inner">
+                            <div class="project-meta">
+                                <span class="project-number">01</span>
+                                <span class="project-tag">RF &middot; Embedded</span>
+                            </div>
 
-                        <h3>AirLink</h3>
+                            <div class="project-trace" aria-hidden="true"></div>
 
-                        <p>
-                            A handheld rover killswitch built for
-                            Space Concordia: a local control unit
-                            paired with a rover-mounted remote end
-                            over 2.4 GHz LoRa (SX1280/SX1281), wired
-                            into the Power Distribution System to cut
-                            power on command.
-                        </p>
+                            <h3>AirLink</h3>
 
-                        <a href="#">View Project &rarr;</a>
+                            <p>
+                                A handheld rover killswitch built for
+                                Space Concordia: a local control unit
+                                paired with a rover-mounted remote end
+                                over 2.4 GHz LoRa (SX1280/SX1281), wired
+                                into the Power Distribution System to cut
+                                power on command.
+                            </p>
+
+                            <a href="#">View Project &rarr;</a>
+                        </div>
                     </article>
 
 
                     <article class="project-card">
-                        <span class="project-number">02</span>
+                        <span class="corner-tick corner-tick--tl" aria-hidden="true"></span>
+                        <span class="corner-tick corner-tick--br" aria-hidden="true"></span>
+                        <div class="project-card-inner">
+                            <div class="project-meta">
+                                <span class="project-number">02</span>
+                                <span class="project-tag">Firmware &middot; CAN Bus</span>
+                            </div>
 
-                        <h3>Status Indicator Light Controller</h3>
+                            <div class="project-trace" aria-hidden="true"></div>
 
-                        <p>
-                            An STM32-based WS2812 LED controller
-                            communicating over CAN bus through an
-                            MCP25625 transceiver, including tracking
-                            down an extended-frame configuration bug
-                            and validating fixes in loopback mode.
-                        </p>
+                            <h3>Status Indicator Light Controller</h3>
 
-                        <a href="#">View Project &rarr;</a>
+                            <p>
+                                An STM32-based WS2812 LED controller
+                                communicating over CAN bus through an
+                                MCP25625 transceiver, including tracking
+                                down an extended-frame configuration bug
+                                and validating fixes in loopback mode.
+                            </p>
+
+                            <a href="#">View Project &rarr;</a>
+                        </div>
                     </article>
 
 
                     <article class="project-card">
-                        <span class="project-number">03</span>
+                        <span class="corner-tick corner-tick--tl" aria-hidden="true"></span>
+                        <span class="corner-tick corner-tick--br" aria-hidden="true"></span>
+                        <div class="project-card-inner">
+                            <div class="project-meta">
+                                <span class="project-number">03</span>
+                                <span class="project-tag">Hardware &middot; Debug</span>
+                            </div>
 
-                        <h3>GPS Module Bring-Up</h3>
+                            <div class="project-trace" aria-hidden="true"></div>
 
-                        <p>
-                            Diagnosed a MAX-M10S GPS module wired
-                            through a CH343P bridge and analog
-                            switches, traced a UART routing fault to
-                            hardwired select pins, and guided the
-                            board-level pin-lift repair.
-                        </p>
+                            <h3>GPS Module Bring-Up</h3>
 
-                        <a href="#">View Project &rarr;</a>
+                            <p>
+                                Diagnosed a MAX-M10S GPS module wired
+                                through a CH343P bridge and analog
+                                switches, traced a UART routing fault to
+                                hardwired select pins, and guided the
+                                board-level pin-lift repair.
+                            </p>
+
+                            <a href="#">View Project &rarr;</a>
+                        </div>
                     </article>
 
                 </div>
@@ -222,12 +251,34 @@
                     about my work?
                 </p>
 
-                <a
-                    href="mailto:your.email@example.com"
-                    class="button primary-button"
-                >
-                    Send Me an Email
-                </a>
+                <div class="contact-actions">
+                    <a
+                        href="mailto:your.email@example.com"
+                        class="button primary-button"
+                    >
+                        Send Me an Email
+                    </a>
+
+                    <a
+                        href="https://github.com/your-username"
+                        class="button secondary-button icon-button"
+                        target="_blank"
+                        rel="noopener"
+                    >
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.57.1.78-.25.78-.55 0-.27-.01-1.17-.02-2.12-3.2.7-3.87-1.36-3.87-1.36-.53-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.64 1.59.24 2.76.12 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.69 5.39-5.25 5.67.41.36.78 1.08.78 2.17 0 1.57-.01 2.83-.01 3.22 0 .3.2.66.79.55A10.52 10.52 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/></svg>
+                        GitHub
+                    </a>
+
+                    <a
+                        href="https://linkedin.com/in/your-profile"
+                        class="button secondary-button icon-button"
+                        target="_blank"
+                        rel="noopener"
+                    >
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.85 0-2.14 1.45-2.14 2.94v5.66H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.11 20.45H3.56V9h3.55v11.45Z"/></svg>
+                        LinkedIn
+                    </a>
+                </div>
 
             </div>
 

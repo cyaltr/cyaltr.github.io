@@ -148,6 +148,78 @@
 
 
 /* =========================================================
+   About section — bullseye tunnel, fixed and centered
+   Thick solid white bands with equally thick gaps, evenly
+   spaced from the section's center, drifting outward on a
+   loop. Only the white bands are drawn; the black gaps are
+   just the section's own background showing through.
+========================================================= */
+
+(function () {
+    const canvas = document.getElementById("tunnelCanvas");
+    if (!canvas) return;
+
+    const ctx = canvas.getContext("2d");
+    const prefersReducedMotion = window.matchMedia(
+        "(prefers-reduced-motion: reduce)"
+    ).matches;
+
+    let width, height, dpr;
+
+    function resize() {
+        dpr = window.devicePixelRatio || 1;
+        width = canvas.clientWidth;
+        height = canvas.clientHeight;
+        canvas.width = width * dpr;
+        canvas.height = height * dpr;
+        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    }
+
+    window.addEventListener("resize", resize);
+    resize();
+
+    const bandWidth = 35;
+    const period = bandWidth * 2;
+    const maxRadius = () => Math.hypot(width, height) * 0.5 + period;
+
+    function drawBands(phase) {
+        ctx.clearRect(0, 0, width, height);
+
+        const cx = width / 2;
+        const cy = height / 2;
+        const limit = maxRadius();
+        const count = Math.ceil(limit / period) + 1;
+
+        ctx.strokeStyle = "#ffffff";
+        ctx.lineWidth = bandWidth;
+
+        for (let i = 0; i < count; i++) {
+            const radius = i * period + phase;
+            if (radius <= 0) continue;
+
+            ctx.beginPath();
+            ctx.arc(cx, cy, radius, 0, Math.PI * 2);
+            ctx.stroke();
+        }
+    }
+
+    let phase = 0;
+
+    function step() {
+        phase = (phase + 0.25) % period;
+        drawBands(phase);
+        requestAnimationFrame(step);
+    }
+
+    if (prefersReducedMotion) {
+        drawBands(0);
+    } else {
+        requestAnimationFrame(step);
+    }
+})();
+
+
+/* =========================================================
    Navbar — subtle background on scroll
 ========================================================= */
 
